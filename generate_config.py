@@ -9,9 +9,9 @@ class Atom:
         self.vz = 0.0
 
 
-def add_ball(atoms, xpos, xvel, radius):
+def add_ball(atoms, xpos, xvel, radius, bond):
     r = radius
-    s = 1.55
+    s = bond
     h = 0.5 * s
     for ix in range(-r, r+1):
         for iy in range(-r, r+1):
@@ -49,7 +49,7 @@ def save_file(filename, atoms):
 
 atoms = []
 
-add_ball(atoms, -20, 10.0, 10)
-add_ball(atoms, 20, -10.0, 5)
+add_ball(atoms, -10, 0.0, 10, 1.55)
+add_ball(atoms, 20, -16.0, 2, 1)
 
 save_file("collision.atoms", atoms)
