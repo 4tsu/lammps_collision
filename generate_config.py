@@ -49,7 +49,7 @@ def save_file(filename, atoms):
 
 atoms = []
 
-add_ball(atoms, -30, 0.0, 8, 1.8)
-add_ball(atoms, 30, 0.0, 8, 1.3)
+add_ball(atoms, -30, 0.0, 8, 1.5)
+add_ball(atoms, 30, 0.0, 8, 1.5)
 
 save_file("collision.atoms", atoms)
