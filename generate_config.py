@@ -38,9 +38,9 @@ def save_file(filename, atoms):
         f.write("Position Data\n\n")
         f.write("{} atoms\n".format(len(atoms)))
         f.write("1 atom types\n\n")
-        f.write("-40.00 40.00 xlo xhi\n")
-        f.write("-20.00 20.00 ylo yhi\n")
-        f.write("-20.00 20.00 zlo zhi\n")
+        f.write("-80.00 80.00 xlo xhi\n")
+        f.write("-40.00 40.00 ylo yhi\n")
+        f.write("-40.00 40.00 zlo zhi\n")
         f.write("\n")
         f.write("Atoms\n\n")
         for i, a in enumerate(atoms):
@@ -54,7 +54,7 @@ def save_file(filename, atoms):
 
 atoms = []
 
-add_one_ball(atoms, 0, 0)
-add_one_ball(atoms, 0.97, 0)
+add_ball(atoms, 10, -1)
+add_ball(atoms, -10, 1)
 
 save_file("collision.atoms", atoms)
